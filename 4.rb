@@ -4,7 +4,7 @@ s= 0
 # n= gets.chomp
 
 def centuryFromYear(year) 
-	(year-1)/100
+	(year-1)/100+1
 end
 
 
