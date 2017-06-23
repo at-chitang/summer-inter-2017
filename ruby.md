@@ -244,6 +244,177 @@ whats_up("What 's up", "Tang", "Van", "Quoc", "Chi")
 >  #==> What 's up Quoc
 >  #==> What 's up Chi
 
+## Struct
+
+### Array
+This is a most basic data structure. It's easy to build, easy to access and control. 
+
+#### Create
+``` ruby
+vd1= []
+vd2= Array.new
+vd3= Array.new(10)
+vd4= Array.new(10, 1)
+vd5= Array.new(10){ |i| i*3 }
+```
+
+#### Insert
+##### First
+``` ruby
+a= [1, 2, 3, 4, 5]
+a.unshift(3)
+a.insert(3)
+a[0, 0]= 3
+```
+##### Inside
+``` ruby
+a= [1, 2, 3, 4, 5]
+pos= 2		#position
+a[pos, 0]= 3
+a.insert(pos, 3)
+```
+##### Last
+``` ruby
+a= [1, 2, 3, 4, 5]
+end = a.length
+a.push( end, 6)
+a << 7
+a.insert(end, 9)
+a[end, 0] = 8
+```
+
+#### Access
+
+##### First
+``` ruby
+a= [1, 2, 3, 4, 5]
+a[0]
+a.first
+a.at(0)
+```
+##### Inside
+``` ruby
+a= [1, 2, 3, 4, 5]
+pos= 2
+a[pos]
+a.at(pos)
+```
+##### Last
+``` ruby
+a= [1, 2, 3, 4, 5]
+end= a.size-1
+a[end]
+a.last
+a.at(end)
+```
+
+#### Delete
+``` ruby
+a= [1, 2, 3, 4, 5]
+a.delete_at()
+a.inject()
+```
+
+### Hash
+Like Hashmap in Java or Map in C++. Hash in Ruby have key and valua
+
+#### Create
+``` ruby
+	h= Hash 
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Class
+
+### New
+``` ruby
+class Car
+	def initialize( make, model)
+		@make  = make
+		@model = model
+	end
+end
+time_machine = Car.new( 'Make', 'Hello')
+puts time_machine
+```
+
+### Getter	Setter
+``` ruby
+class	Person
+	attr_reader	:name
+	attr_writer	:name
+end
+class	Person
+	attr_accessor	:name
+end	
+```
+
+## Module
+
+### New
+``` ruby
+module	Action
+	def	jump
+		@distance =	rand(4) + 2
+		puts "I jumped forward #{@distance} feet!"
+	end
+end
+```
+
+### Include
+``` ruby
+module Action
+	def	jump
+		@distance = rand(4) + 2
+		puts "I jumped forward #{@distance} feet!"
+	end
+end
+class Rabbit
+	include	Action
+	attr_reader	:name
+	def	initialize(name)
+		@name = name
+	end
+end
+
+Rabbit.new("huy").jump
+```
+
+### Extend
+``` ruby
+module Action
+	def	jump
+		@distance = rand(4) + 2
+		puts "I jumped forward #{@distance} feet!"
+	end
+end
+class Rabbit
+	extend Action
+	attr_reader	:name
+	def	initialize(name)
+		@name = name
+	end
+end
+
+Rabbit.jump
+```
+
+
+
+
 
 
 
